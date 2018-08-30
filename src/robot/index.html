@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Worksite Models - Mobile Robot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/assets/robot/index.css">
+    <script src="/ready.js"></script>
+  </head>
+  <body class="mdc-typography">
+
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <span class="mdc-toolbar__title mdc-toolbar-title catalog-title">
+            <a href="/" title="Home">Dynamic Worksite Models</a>
+          </span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+          <div>
+            <nav id="toolbar-tab-bar" class="mdc-tab-bar custom-tab-bar-in-toolbar mdc-tab-bar-upgraded">
+              <a class="mdc-tab mdc-ripple-upgraded" href="/method">Method</a>
+              <a class="mdc-tab mdc-ripple-upgraded" href="/results">Results</a>
+              <a class="mdc-tab mdc-ripple-upgraded--foreground-activation mdc-tab--active" href="/robot">Robot</a>
+              <a class="mdc-tab mdc-ripple-upgraded" href="/dataset">Dataset</a>
+              <span class="mdc-tab-bar__indicator"></span>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main class="content mdc-toolbar-fixed-adjust">
+      <section class="mdc-layout-grid">
+        <h1 class="mdc-typography--headline4">Mobile Robot</h1>
+        <p class="mdc-typography--body1">
+          A mobile robot is designed and constructed to test the proposed algorithms. The mobile robot is based on the A4WD1 rover platform from Lynxmotion. An NVIDIA TX2 computer is fitted to the robot for data processing and recording. The mobile robot is also fitted with a Zed RGB-D camera for collection of RGB-D images. A RPLIDAR A2 horizontal laser scanner is mounted on the mobile robot for collecting laser scan data.
+        </p>
+
+
+        <!-- Figure 7: <! Mobile Robot -->
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-10 mdc-shadow--2dp">
+              <figure class="mdc-card__media">
+                <img src="images/mobile-robot.png" alt="The theoretical framework" />
+              </figure>
+              <div class="caption">
+                <p class="mdc-typography--body2 mdc-typography--caption">
+                  Mobile robot used for data collection and testing.
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="mdc-layout-grid">
+        <h2 class="mdc-typography--headline5">Localization</h1>
+        <p class="mdc-typography--body1">
+          The global position of the mobile robot within the building is constantly estimated using an advanced simultaneous localization and mapping (SLAM) algorithm [4]. The RPLIDAR sensor is used to provide laser scan data for SLAM at approximately 10 Hz, and the Zed RGB-D camera is used to provide visual odometry for SLAM at 60 Hz. An initial map of the building is created by manually driving the mobile robot around the building, while running the SLAM algorithm.
+        </p>
+        <!-- Figure 8: Depth Masks -->
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-shadow--2dp">
+              <figure class="mdl-card__media">
+                <video controls autoplay class="stretch">
+                  <source src="videos/full-mapping.mov">
+                  Your browser does not support the video tag.
+                </video>
+              </figure>
+              <div class="caption">
+                <p class="mdc-typography--body2 mdc-typography--caption">Mobile robot localization using SLAM.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="mdc-typography--headline5">Source Code</h2>
+        <p class="mdc-typography--body1">
+          We provide all the source code for data collection using the mobile robot. Additionally, we provide source code for mobile robot control layer. The source code is written in Python and C++ using the Robot Operating System (ROS) framework. 
+        </p><p>
+          The source code for data collection is available at [<a href="#" title="Mobile Robot Data Collection">Coming Soon</a>]
+        </p><p>
+          The source code for the control dashboard is available at [<a href="" title="Mobile Robot Data Collection">Coming Soon</a>]
+        </p>
+      </>
+
+    </main>
+
+    <script src="/assets/material-components-web.js" async></script>
+    <script>
+      demoReady(function() {
+        var btns = document.querySelectorAll('.mdc-button:not([data-demo-no-js])');
+        for (var i = 0, btn; btn = btns[i]; i++) {
+          mdc.ripple.MDCRipple.attachTo(btn);
+        }
+
+        document.getElementById('toggle-disabled').addEventListener('change', function() {
+          var isDisabled = this.checked;
+          [].forEach.call(document.querySelectorAll('button'), function(button) {
+            button.disabled = isDisabled;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Worksite Models - Dataset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/assets/dataset/index.css">
+    <script src="/ready.js"></script>
+  </head>
+  <body class="mdc-typography">
+
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <span class="mdc-toolbar__title mdc-toolbar-title catalog-title">
+            <a href="/" title="Home">Dynamic Worksite Models</a>
+          </span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+          <div>
+            <nav id="toolbar-tab-bar" class="mdc-tab-bar custom-tab-bar-in-toolbar mdc-tab-bar-upgraded">
+              <a class="mdc-tab mdc-ripple-upgraded" href="/method">Method</a>
+              <a class="mdc-tab mdc-ripple-upgraded" href="/results">Results</a>
+              <a class="mdc-tab mdc-ripple-upgraded" href="/robot">Robot</a>
+              <a class="mdc-tab mdc-ripple-upgraded mdc-tab mdc-ripple-upgraded mdc-tab mdc-ripple-upgraded--foreground-activation mdc-tab--active" href="/dataset">Dataset</a>
+              <span class="mdc-tab-bar__indicator"></span>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main class="mdc-toolbar-fixed-adjust">
+      <section class="content mdc-layout-grid">
+        <div class="demo-container ">
+          <div class="demo-content mdc-color--white mdc-shadow--4dp content mdc-color-text--grey-800 mdc-cell mdc-layout-grid__cell--span-12">
+            <h1 class="demo-title mdc-typography--headline6">Dataset</h1>
+            <p class="mdc-typography--body1">
+              The dataset is split into test and train sequences. The training sequence contains 5121 objects labelled across 821 RGB-D images. A furthur 1010 objects across 186 images form the test set<br><br>
+              Download [<a href="#" title="Automation in Construction Paper">Coming Soon</a>]
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/material-components-web.js" async></script>
+    <script>
+      demoReady(function() {
+        var btns = document.querySelectorAll('.mdc-button:not([data-demo-no-js])');
+        for (var i = 0, btn; btn = btns[i]; i++) {
+          mdc.ripple.MDCRipple.attachTo(btn);
+        }
+
+        document.getElementById('toggle-disabled').addEventListener('change', function() {
+          var isDisabled = this.checked;
+          [].forEach.call(document.querySelectorAll('button'), function(button) {
+            button.disabled = isDisabled;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
