@@ -1,6 +1,7 @@
 # CIFE Project Page - Dynamic Worksite Models
 
-Research website for work at Stanford University
+Research website for work at Stanford University.
+The website is currently served at: [worksite-models.s3-website-us-east-1.amazonaws.com](http://worksite-models.s3-website-us-east-1.amazonaws.com)
 
 ## Quick Start
 Update npm and node. Then:
