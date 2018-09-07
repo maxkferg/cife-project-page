@@ -19,13 +19,13 @@
     <meta charset="utf-8">
     <title>Dynamic Worksite Models</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/logo_components_color_2x_web_48dp.png">
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
     <link rel="stylesheet" href="/assets/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="/index.css">
   </head>
   <body class="mdc-typography">
-
     <header class="mdc-toolbar">
       <div class="mdc-toolbar__row">
         <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
@@ -47,22 +47,55 @@
       </div>
     </header>
 
-    <main>
-      <section class="content mdc-layout-grid">
-        <div class="demo-container ">
-          <!--div class="mdc-cell mdc-cell--2-col mdc-cell--hide-tablet mdc-cell--hide-phone"></div-->
-          <div class="demo-content mdc-color--white mdc-shadow--4dp content mdc-color-text--grey-800 mdc-cell mdc-layout-grid__cell--span-12">
-            <h1 class="mdc-typography--headline5">About</h1>
-            <p class="mdc-typography--body1">
-              Max Ferguson is a doctoral student in the Department of Civil Engineering at Stanford University. He currently studies how recent advances in computer vision can be used to automatically monitor construction progress.
-            </p>
-            <p class="mdc-typography--body1">
-              Max grew up in New Zealand where he received Bachelor of Engineering in Civil and Environmental Engineering. In 2014, he was awarded a Fulbright Graduate Fellowship to investigate how computational techniques, such as machine learning, could be applied to structural damage prediction, which became the focus of his work at Stanford University. After completing a M.S at Stanford in 2016, his research focus shifted toward optimization and automation in the manufacturing and construction industries.
-            </p>
-            <h1 class="mdc-typography--headline5">Selected Publications</h1>
+    <main class="content">
+      <section>
+        <h1 class="mdc-typography--headline4">Dynamic Worksite Models with Mobile Robots</h1>
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-shadow--2dp">
+              <figure class="mdl-card__media">
+                <video autoplay loop controls class="stretch">
+                  <source src="method/videos/combined.webm">
+                  Your browser does not support the video tag.
+                </video>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
+      <section>
+        <h2 class="demo-title mdc-typography--headline5">Overview</h2>
+        <p class="mdc-typography--body1">
+            Automation in construction and facility management could significantly improve efficiency and productivity throughout the lifecycle of modern facilities. However, for robots and autonomous systems to operate in effectively in dynamic and unstructured environments such as a construction sites, they must be able to infer or obtain a semantic model of the environment.
+        </p>
+        <p class="mdc-typography--body1">
+          Previous efforts in Civil Engineering and Robotics have focused on developing static maps of the environment, often neglecting the possibility that objects can be moved. This project investigates how information from mobile robots can be used to dynamically update an existing model of the building environment with semantic-rich information. We develop a new 2D-3D computer vision to detect and localize common building site objects, using RGB-D frames. We then propose using a multi-object Kalman filter to track objects across successive RGB-D frames to filter false-positive detections and refine position estimates.
+        </p>
+      <section>
+
+
+      <section>
+        <h2 class="demo-title mdc-typography--headline5">Paper</h2>
+        <img src="images/paper.png" style="width: 90%;"></img>
+        <p class="mdc-typography--body1">
+          A 2D-3D Object Detection System for Updating Building Information Models with Mobile Robots <br>
+          M. Ferguson, K. H. Law <br>
+          <a href="#" title="Automation in Construction Paper">[Coming Soon]</a>
+
+        <h2 class="demo-title mdc-typography--headline5">Source Code</h2>
+        <p class="mdc-typography--body1">
+          SurfaceNet Source Code [<a href="#" title="Automation in Construction Paper">Coming Soon</a>]<br>
+          Mobile Robot Source Code [<a href="#" title="Automation in Construction Paper">Coming Soon</a>]<br>
+      </section>
+
+      <section>
+        <h2 class="demo-title mdc-typography--headline5">Acknowledgement</h2>
+          <p class="mdc-typography--body1">
+            This project was funded by the Center for Integrated Facility Engineering (CIFE) at Stanford University.
+          </p>
+          <img src="images/cife.jpg" style="height: 60px; margin-right: 30px"></img>
+          <img src="images/civil.jpg" style="height: 60px;"></img>
+      <section>
     </main>
   </body>
 </html>

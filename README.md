@@ -37,15 +37,6 @@ We officially support the last two versions of every major browser. Specifically
 - **Edge** on Windows
 - **IE 11** on Windows
 
-## Thank you
+## License
 
-Fast, reliable [automated screenshot testing](test/screenshot/) is generously provided by:
-
-[![CrossBrowserTesting logo](test/screenshot/static/images/cbt-logo.png)](https://crossbrowsertesting.com/)
-
-Free for open source projects!
-
-Additional continuous integration services courtesy of:
-
-- [Travis CI](https://travis-ci.com/)
-- [Sauce Labs](https://saucelabs.com/)
+MIT
