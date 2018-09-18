@@ -45,7 +45,7 @@
         <!-- Figure 7: <! Mobile Robot -->
         <div class="mdc-layout-grid">
           <div class="mdc-layout-grid__inner">
-            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-10 mdc-shadow--2dp">
+            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-shadow--2dp">
               <figure class="mdc-card__media">
                 <img src="images/mobile-robot.png" alt="The theoretical framework" />
               </figure>
@@ -57,25 +57,24 @@
             </div>
           </div>
         </div>
-
       </section>
       <section class="mdc-layout-grid">
-        <h2 class="mdc-typography--headline5">Localization</h1>
+        <h2 class="mdc-typography--headline5">Mapping and Localization</h1>
         <p class="mdc-typography--body1">
-          The global position of the mobile robot within the building is constantly estimated using an advanced simultaneous localization and mapping (SLAM) algorithm [4]. The RPLIDAR sensor is used to provide laser scan data for SLAM at approximately 10 Hz, and the Zed RGB-D camera is used to provide visual odometry for SLAM at 60 Hz. An initial map of the building is created by manually driving the mobile robot around the building, while running the SLAM algorithm.
+          The global position of the mobile robot within the building is constantly estimated using an advanced simultaneous localization and mapping (SLAM) algorithm. The RPLIDAR sensor is used to provide laser scan data for SLAM at approximately 10 Hz, and the Zed RGB-D camera is used to provide visual odometry for SLAM at 60 Hz. An initial map of the building is created by manually driving the mobile robot around the building, while running the SLAM algorithm.
         </p>
         <!-- Figure 8: Depth Masks -->
         <div class="mdc-layout-grid">
           <div class="mdc-layout-grid__inner">
-            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-shadow--2dp">
+            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-10 mdc-shadow--2dp">
               <figure class="mdl-card__media">
                 <video controls autoplay class="stretch">
-                  <source src="videos/full-mapping.mov">
+                  <source src="videos/driving-slam.webm">
                   Your browser does not support the video tag.
                 </video>
               </figure>
               <div class="caption">
-                <p class="mdc-typography--body2 mdc-typography--caption">Mobile robot localization using SLAM.</p>
+                <p class="mdc-typography--body2 mdc-typography--caption">Mobile robot mapping and localization using SLAM.</p>
               </div>
             </div>
           </div>

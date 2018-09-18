@@ -45,7 +45,8 @@
         <h1 class="mdc-typography--headline4">Results</h1>
         <p class="mdc-typography--body1">
           The proposed system is evaluated qualitatively and quantitatively.
-          We start by comparing the output of the computer vision algorithm with the state of the art Mask R-CNN architecture
+          One of the core compoments is an novel 3D object detection method, named Object R-CNN.
+          Below, we compare the output of Object R-CNN the state-of-the-art Mask R-CNN architecture.
         </p>
 
         <!-- Figure 1: Mask R-CNN vs Ours -->
@@ -56,7 +57,7 @@
                 <img src="images/comparison1.png" alt="The theoretical framework" />
               </figure>
               <div class="caption">
-                <p class="mdc-typography--body2 mdc-typography--caption">Comparison of Mask R-CNN to our Architecture, when trained on the same dataset</p>
+                <p class="mdc-typography--body2 mdc-typography--caption">Comparison of worksite object detection using Mask R-CNN and Object R-CNN (ours). Both systems are trained on the same dataset, but our system predicts 3D position and size.</p>
               </div>
             </div>
           </div>
@@ -70,7 +71,7 @@
                 <img src="images/comparison2.png" alt="The theoretical framework" />
               </figure>
               <div class="caption">
-                <p class="mdc-typography--body2 mdc-typography--caption">Comparison of Mask R-CNN to our Architecture, when trained on the same dataset</p>
+                <p class="mdc-typography--body2 mdc-typography--caption">Comparison of worksite object detection using Mask R-CNN and Object R-CNN (ours).</p>
               </div>
             </div>
           </div>
@@ -84,7 +85,25 @@
                 <img src="images/comparison3.png" alt="The theoretical framework" />
               </figure>
               <div class="caption">
-                <p class="mdc-typography--body2 mdc-typography--caption">Comparison of Mask R-CNN to our Architecture, when trained on the same dataset</p>
+                <p class="mdc-typography--body2 mdc-typography--caption">Comparison of worksite object detection using Mask R-CNN and Object R-CNN (ours).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="mdc-typography--body1">
+          Our object detection network (Object R-CNN) reaches a similar accuracy as Mask R-CNN in 2D instance segmentation, but also predicts the size and location of objects in 3D space. However, errors in object detection and mobile robot localization can still lead to problems when updating the building information model. Our tracking system minimizes the impact of localization error and false-detections:
+        </p>
+
+        <!-- Figure 1: Mask R-CNN vs Ours -->
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-shadow--2dp">
+              <figure class="mdc-card__media">
+                <img src="images/comparison4.png" alt="The theoretical framework" />
+              </figure>
+              <div class="caption">
+                <p class="mdc-typography--body2 mdc-typography--caption">Comparison of the updated building information model without tracking system (left) and with tracking system (right).</p>
               </div>
             </div>
           </div>

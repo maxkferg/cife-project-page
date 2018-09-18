@@ -22,3 +22,8 @@ cpx.copy(source, dest);
 dest = 'dist';
 source = 'src/**/videos/*.{webm,mov}';
 cpx.copy(source, dest);
+
+// Copy all the videos
+dest = 'dist';
+source = 'src/uploads/uploads/**';
+cpx.copy(source, dest);

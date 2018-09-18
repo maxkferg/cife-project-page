@@ -37,7 +37,7 @@
       <section class="mdc-layout-grid">
         <h1 class="mdc-typography--headline4">Method</h1>
           <p class="mdc-typography--body1">
-            We propose an end-to-end method for dynamically adding objects to a building information model. The method is largely comprised of two modules: A novel 2D-3D computer vision algorithm that detects, classifies and localizes objects using RGB-D images, and a multi-object tracking system. 
+            We propose an end-to-end method for dynamically adding objects to a building information model. The method is largely comprised of two modules: A novel 2D-3D computer vision algorithm that detects, classifies and localizes objects using RGB&#8209;D images, and a multi-object tracking system.
           </p>
 
 
@@ -49,7 +49,7 @@
                   <img src="images/banner-title.png" alt="" />
                 </figure>
                 <div class="caption">
-                  <p class="mdc-typography--body2 mdc-typography--caption">Updating worksite models with mobile robots. Data is collected using a SLAM-enabled mobile robot with RGB-D sensors. Images from the mobile robot vision system is analysed with our 2D-3D computer vision algorithm. Objects are added and removed from the building information model in real-time</p>
+                  <p class="mdc-typography--body2 mdc-typography--caption">Updating worksite models with mobile robots. Data is collected using a SLAM-enabled mobile robot with RGB&#8209;D sensors. Images from the mobile robot vision system is analysed with our 2D-3D computer vision algorithm. Objects are added and removed from the building information model in real-time</p>
                 </div>
               </div>
             </div>
@@ -57,7 +57,7 @@
 
         <h2 class="demo-title mdc-typography--headline6">Framework</h2>
           <p class="mdc-typography--body1">
-            We start by proposing a generic framework for updating building information models using mobile robots. In this framework, each mobile robot obtains information about its environment using a combination of LiDAR and RGB-D cameras. An object recognition algorithm is used to detect objects in the field-of-view of the mobile robot and determine the position of each object relative to the mobile robot. The global position of the mobile robot is estimated using a localization algorithm such as Adaptive Monte Carlo Localization (AMCL) or Continuous-Time SLAM. An object tracking and global object localization layer estimates the global positions of detected objects, and filters false-positive detections. Information is broadcasted to the building information model where is used to dynamically update the model.
+            We start by proposing a generic framework for updating building information models using mobile robots. In this framework, each mobile robot obtains information about its environment using a combination of LiDAR and RGB&#8209;D cameras. An object recognition algorithm is used to detect objects in the field-of-view of the mobile robot and determine the position of each object relative to the mobile robot. The global position of the mobile robot is estimated using a localization algorithm such as Adaptive Monte Carlo Localization (AMCL) or Continuous-Time SLAM. An object tracking and global object localization layer estimates the global positions of detected objects, and filters false-positive detections. Information is broadcasted to the building information model where is used to dynamically update the model.
           </p>
 
           <!-- Figure 2: Theoretical framework -->
@@ -76,7 +76,7 @@
 
         <h2 class="demo-title mdc-typography--headline6">2D-3D Object Detection Algorithm</h2>
           <p class="mdc-typography--body1">
-            The core component of the proposed system is a computer vision algorithm capable of classifying and localizing objects of interest in images captured by a camera on the mobile robot. We notice that 2D object detectors can easily detect a range of worksite objects, using RGB images. 
+            The core component of the proposed system is a computer vision algorithm which we refer to as Object R&#8209;CNN. Object R-CNN is designed to classify and localize objects of interest, using images captured by a camera on the mobile robot. We notice that 2D object detectors can easily detect a range of worksite objects, using RGB images:
           </p>
 
           <!-- Figure 2: Theoretical framework -->
@@ -87,14 +87,14 @@
                   <img src="images/boxes2d.png" alt="The theoretical framework" />
                 </figure>
                 <div class="caption">
-                  <p class="mdc-typography--body2 mdc-typography--caption">2D object detection and instance segmentation with the Mask R-CNN object detector. Object detection with a 2D framework like Mask R-CNN is fast and accurate, thanks to recent advances in computer vision and graphics hardware.</p>
+                  <p class="mdc-typography--body2 mdc-typography--caption">2D object detection and instance segmentation with the Mask R&#8209;CNN object detector. Object detection with a 2D framework like Mask R&#8209;CNN is fast and accurate, thanks to recent advances in computer vision and graphics hardware.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <p class="mdc-typography--body1">
-            However, to automatically update a spatial model, the position of each object in 3D space must be obtained. We find that the depth of the object can be estimated using the median point depth inside bounding box. The bounding box can then be projected into 3D space to obtain a rough 3D model of each object
+            However, to automatically update a spatial model, the position of each object in 3D space must be obtained. We find that the depth of the object can be estimated using the median point depth inside bounding box. The bounding box is then projected into 3D space to obtain a rough 3D model of each object
           </p>
 
           <div class="mdc-layout-grid">
@@ -104,14 +104,14 @@
                   <img src="images/voxels.png" alt="The theoretical framework" />
                 </figure>
                 <div class="caption">
-                  <p class="mdc-typography--body2 mdc-typography--caption">Voxel models of worksite objects, generated using the RGB-D image.</p>
+                  <p class="mdc-typography--body2 mdc-typography--caption">Voxel models of worksite objects, generated using the RGB&#8209;D image.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <p class="mdc-typography--body1">
-            We propose a novel extension to Mask R-CNN, which utilizes 2D and 3D information to prediction to position of worksite objects in 3D space. The model uses a 3D CNN, similar to VoxNet, to process information from the 3D representation of each detected object. This information is combined with 2D features from Mask R-CNN, to predict the size and position of each object.
+            In Object R-CNN, both 2D and 3D information is combined predict the position of worksite objects in 3D space. Object R-CNN uses a 3D CNN, similar to VoxNet, to process information from the 3D representation of each detected object. This information is combined with 2D features from Mask R-CNN, to predict the size and position of each object.
           </p>
 
           <!-- Figure 3: Neural Network -->
@@ -122,7 +122,7 @@
                   <img src="images/cnn.png" alt="The theoretical framework" />
                 </figure>
                 <div class="caption">
-                  <p class="mdc-typography--body2 mdc-typography--caption">Architecture of the proposed defect detection network. Numbers denote spatial resolution and channels. Arrows denote either convolution, deconvolution, or fully connected layers as can be inferred from context (convolution preserves spatial dimension while deconvolution increases it). All convolution layers are 3×3, except the output convolution layer which is 1×1. Deconvolution layers are 2×2 with stride 2. The ReLU activation function is used in hidden layers.</p>
+                  <p class="mdc-typography--body2 mdc-typography--caption">Object R-CNN Architecture. Numbers denote spatial resolution and channels. Arrows denote either convolution, deconvolution, or fully connected layers as can be inferred from context (convolution preserves spatial dimension while deconvolution increases it). All convolution layers are 3×3, except the output convolution layer which is 1×1. Deconvolution layers are 2×2 with stride 2.</p>
                 </div>
               </div>
             </div>
@@ -138,12 +138,12 @@
               <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-shadow--2dp">
                 <figure class="mdl-card__media">
                   <video controls autoplay class="stretch">
-                    <source src="videos/combined.webm">
+                    <source src="videos/combined-video.webm">
                     Your browser does not support the video tag.
                   </video>
                 </figure>
                 <div class="caption">
-                  <p class="mdc-typography--body2 mdc-typography--caption">Mobile robot recognizing objects. Note, that several false positive-detections lead to incorrect updates</p>
+                  <p class="mdc-typography--body2 mdc-typography--caption">Mobile robot recognizing objects and updating the building information model.</p>
                 </div>
               </div>
             </div>
@@ -158,8 +158,10 @@
               <li>Reduction of false-positive detections introduced by the object detector</li>
               <li>Association of multiple objects to their tracks</li>
             </ul>
+
             <p class="mdc-typography--body1">
-            Objects are currently tracked in the image coordinate system. Future work will investigate tracking objects a global three dimensional coordinate system. The Kalman filter is initialized using a constant velocity model.
+              If an object can be tracked for a set number of frames, it is considered a correct detection and can
+              be added to the building information model.
             </p>
 
           <!-- Figure 6: <! Association -->
@@ -171,7 +173,7 @@
                 </figure>
                 <div class="caption">
                   <p class="mdc-typography--body2 mdc-typography--caption">
-                    Associate of detections to tracks
+                    Association of detections to tracks.
                 </p>
                 </div>
               </div>

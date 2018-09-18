@@ -9,3 +9,4 @@ out
 .idea
 *.sw*
 .closure-tmp
+src/uploads/

@@ -38,9 +38,60 @@
       <section class="content mdc-layout-grid">
         <div class="demo-container ">
           <div class="demo-content mdc-color--white mdc-shadow--4dp content mdc-color-text--grey-800 mdc-cell mdc-layout-grid__cell--span-12">
-            <h1 class="demo-title mdc-typography--headline6">Dataset</h1>
+            <h1 class="demo-title mdc-typography--headline4">Dataset</h1>
             <p class="mdc-typography--body1">
-              The dataset is split into test and train sequences. The training sequence contains 5121 objects labelled across 821 RGB-D images. A furthur 1010 objects across 186 images form the test set<br><br>
+              A dataset was collected using the purpose-built mobile robot. The dataset includes 6121 RGB-D labelled objects across 1007 images. Objects are labelled with 2D segmentation masks and 3D bounding boxes.
+            </p><p class="mdc-typography--body1">
+              The dataset is split into test and train sequences. The training sequence contains 5121 objects labelled across 821 RGB-D images. The test set consists of a further 1010 objects annotated across 186 images.
+            </p>
+
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-shadow--2dp">
+                  <figure class="mdc-card__media">
+                    <img src="images/cones.png" alt="" />
+                  </figure>
+                  <div class="caption">
+                    <p class="mdc-typography--body2 mdc-typography--caption">An annotated RGB-D frame from the dataset. Each image is annotated with 3D bounding boxes and 2D segmentation masks, as shown</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-shadow--2dp">
+                  <figure class="mdc-card__media">
+                    <img src="images/buckets.png" alt="" />
+                  </figure>
+                  <div class="caption">
+                    <p class="mdc-typography--body2 mdc-typography--caption">An annotated RGB-D frame from the dataset. The dataset contains objects near and far from the camera, making accurate detection more difficult.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-shadow--2dp">
+                  <figure class="mdc-card__media">
+                    <img src="images/lighting.png" alt="" />
+                  </figure>
+                  <div class="caption">
+                    <p class="mdc-typography--body2 mdc-typography--caption">An annotated RGB-D frame from the dataset. The dataset contains a range of challenging lighting conditions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="demo-title mdc-typography--headline5">Download</h2>
+            <p class="mdc-typography--body1">
+              The full dataset will be made publicly available to accelerate research in the field.
+              Please cite the following work when using our dataset in an academic context:</p>
+            <p>
+              M. Ferguson, K. H. Law, "A 2D-3D Object Detection System for Updating Building Information Models with Mobile Robots", 2018
+            </p>
+            <p class="mdc-typography--body1">
               Download [<a href="#" title="Automation in Construction Paper">Coming Soon</a>]
             </p>
           </div>
