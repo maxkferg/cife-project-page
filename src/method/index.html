@@ -22,6 +22,7 @@
         <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
           <div>
             <nav id="toolbar-tab-bar" class="mdc-tab-bar custom-tab-bar-in-toolbar mdc-tab-bar-upgraded">
+              <a class="mdc-tab mdc-ripple-upgraded" href="/">Overview</a>
               <a class="mdc-tab mdc-ripple-upgraded mdc-tab mdc-ripple-upgraded mdc-tab mdc-ripple-upgraded--foreground-activation mdc-tab--active" href="/method">Method</a>
               <a class="mdc-tab mdc-ripple-upgraded" href="/results">Results</a>
               <a class="mdc-tab mdc-ripple-upgraded" href="/robot">Robot</a>
@@ -79,7 +80,7 @@
             The core component of the proposed system is a computer vision algorithm which we refer to as Object R&#8209;CNN. Object R-CNN is designed to classify and localize objects of interest, using images captured by a camera on the mobile robot. We notice that 2D object detectors can easily detect a range of worksite objects, using RGB images:
           </p>
 
-          <!-- Figure 2: Theoretical framework -->
+          <!-- Figure 2: Mask R-CNN Results -->
           <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
               <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-shadow--2dp">
@@ -129,6 +130,24 @@
           </div>
 
           <p class="mdc-typography--body1">
+            Detections from Object R-CNN look similar to those from Mask R-CNN, but the position and size of each object in 3D space is also predicted.
+          </p>
+
+          <!-- Figure 2: Object R-CNN Results -->
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-shadow--2dp">
+                <figure class="mdc-card__media">
+                  <img src="images/boxes3d.png" alt="The theoretical framework" />
+                </figure>
+                <div class="caption">
+                  <p class="mdc-typography--body2 mdc-typography--caption">3D object detection and 2D instance segmentation with the Object R&#8209;CNN object detector.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mdc-typography--body1">
             When deployed to the mobile robot, the trained system can be used to detect objects, and automatically add them to a geometric model of the environment
           </p>
 
@@ -167,9 +186,9 @@
           <!-- Figure 6: <! Association -->
           <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
-              <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-shadow--2dp">
+              <div class="mdc-card figure-card mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-shadow--2dp">
                 <figure class="mdc-card__media">
-                  <img src="images/association.png" alt="The theoretical framework" />
+                  <img src="images/association-column.png" alt="The theoretical framework" />
                 </figure>
                 <div class="caption">
                   <p class="mdc-typography--body2 mdc-typography--caption">

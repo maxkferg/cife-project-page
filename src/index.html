@@ -36,6 +36,7 @@
         <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
           <div>
             <nav id="toolbar-tab-bar" class="mdc-tab-bar custom-tab-bar-in-toolbar mdc-tab-bar-upgraded">
+              <a class="mdc-tab mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation mdc-tab--active" href="/">Overview</a>
               <a class="mdc-tab mdc-ripple-upgraded" href="/method">Method</a>
               <a class="mdc-tab mdc-ripple-upgraded" href="/results">Results</a>
               <a class="mdc-tab mdc-ripple-upgraded" href="/robot">Robot</a>
@@ -69,7 +70,7 @@
           Automation in construction and facility management could significantly improve efficiency and productivity throughout the lifecycle of modern facilities. However, for robots and autonomous systems to operate in effectively in dynamic and unstructured environments such as a construction sites, they must be able to infer or obtain a semantic model of the environment.
         </p>
         <p class="mdc-typography--body1">
-          Previous efforts in Civil Engineering and Robotics have focused on developing static maps of the environment, often neglecting the possibility that objects can be moved. This project investigates how information from mobile robots can be used to dynamically update an existing model of the building environment with semantic-rich information. We develop a new 2D-3D computer vision to detect and localize common worksite objects, using RGB&#8209;D frames. We then propose using a multi-object Kalman filter to track objects across successive RGB-D frames to filter false-positive detections and refine position estimates.
+          Previous efforts in Civil Engineering and Robotics have focused on developing static maps of the environment, often neglecting the possibility that objects can be moved. This project investigates how information from mobile robots can be used to dynamically update an existing model of the building environment with semantic-rich information. We propose Object R-CNN, a new 2D-3D computer vision algorithm to detect and localize common worksite objects, using RGB&#8209;D frames. We then propose using a multi-object Kalman filter to track objects across successive RGB-D frames, allowing false-positive detections to be ignored and position estimates to be refined.
         </p>
       <section>
 
@@ -84,7 +85,7 @@
 
         <h2 class="demo-title mdc-typography--headline5">Source Code</h2>
         <p class="mdc-typography--body1">
-          SurfaceNet Source Code [<a href="#" title="Automation in Construction Paper">Coming Soon</a>]<br>
+          Object R-CNN Source Code [<a href="#" title="Automation in Construction Paper">Coming Soon</a>]<br>
           Mobile Robot Source Code [<a href="#" title="Automation in Construction Paper">Coming Soon</a>]<br>
       </section>
 
