@@ -27,3 +27,8 @@ cpx.copy(source, dest);
 dest = 'dist';
 source = 'src/uploads/uploads/**';
 cpx.copy(source, dest);
+
+// Copy all the pdf assets
+dest = 'dist';
+source = 'src/assets/*.pdf';
+cpx.copy(source, dest);
