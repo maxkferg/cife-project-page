@@ -22,7 +22,6 @@
 
 const CopyrightBannerPlugin = require('./copyright-banner-plugin');
 const CssCleanupPlugin = require('./css-cleanup-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 class PluginFactory {
   constructor({globber} = {}) {
@@ -42,10 +41,6 @@ class PluginFactory {
       cleanupDirRelativePath,
       globber: this.globber_,
     });
-  }
-
-  createCssExtractorPlugin(outputFilenamePattern) {
-    return new ExtractTextPlugin(outputFilenamePattern);
   }
 }
 

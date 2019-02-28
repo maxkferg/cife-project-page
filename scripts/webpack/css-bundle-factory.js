@@ -21,6 +21,9 @@
 'use strict';
 
 const autoprefixer = require('autoprefixer');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const glob = require('glob');
 
 class CssBundleFactory {
   constructor({
@@ -71,8 +74,6 @@ class CssBundleFactory {
       }));
     }
 
-    const cssExtractorPlugin = this.pluginFactory_.createCssExtractorPlugin(filenamePattern);
-
     return {
       name: bundleName,
       entry: chunks,
@@ -85,11 +86,11 @@ class CssBundleFactory {
       module: {
         rules: [{
           test: /\.scss$/,
-          use: this.createCssLoader_(cssExtractorPlugin),
+          use: this.createCssLoader_(MiniCssExtractPlugin.loader)
         }],
       },
       plugins: [
-        cssExtractorPlugin,
+        new MiniCssExtractPlugin(),
         ...fsCleanupPlugins,
         ...plugins,
       ],
@@ -187,30 +188,29 @@ class CssBundleFactory {
   createCssLoader_(extractTextPlugin) {
     const getAbsolutePath = (...args) => this.pathResolver_.getAbsolutePath(...args);
 
-    return extractTextPlugin.extract({
-      use: [
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true,
-          },
+    return [
+      extractTextPlugin,
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
         },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: true,
-            plugins: () => [this.autoprefixerLib_()],
-          },
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+          plugins: () => [this.autoprefixerLib_()],
         },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true,
-            includePaths: [getAbsolutePath('/packages/material-components-web/node_modules')],
-          },
+      },
+      {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true,
+          includePaths: [getAbsolutePath('/packages/material-components-web/node_modules')],
         },
-      ],
-    });
+      },
+    ],
   }
 }
 
