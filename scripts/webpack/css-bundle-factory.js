@@ -210,7 +210,7 @@ class CssBundleFactory {
           includePaths: [getAbsolutePath('/packages/material-components-web/node_modules')],
         },
       },
-    ],
+    ]
   }
 }
 
